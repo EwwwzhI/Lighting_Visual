@@ -1,0 +1,59 @@
+# 忽略所有文件
+*
+
+# 但保留以下文件
+!.gitignore
+!color_analyzer.py
+!README.md
+!requirements.txt
+
+# Python缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv
+
+# IDE配置文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code配置
+.claude/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 测试和临时文件
+*.log
+*.tmp
+temp/
+test/
+
+# 图片和输出文件
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.pdf
+
+# 数据文件
+*.csv
+*.xlsx
+*.json
+*.xml
+
+# 文档草稿
+docs/
+draft/

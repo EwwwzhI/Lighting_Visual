@@ -1,0 +1,5 @@
+Pillow>=8.0.0
+numpy>=1.19.0
+matplotlib>=3.3.0
+scikit-image>=0.18.0
+colour-science>=0.4.0

@@ -685,6 +685,15 @@ def create_toolbar_modern(parent, root, points_data, image_viewer, info_panel, c
             btn.bind("<Enter>", on_enter)
             btn.bind("<Leave>", on_leave)
 
+    # 在工具栏右下角添加快捷键提示
+    shortcut_hint = tk.Label(content,
+                             text="快捷键：Ctrl + 滚轮 缩放   方向键 移动图片",
+                             bg=colors['bg_secondary'],
+                             fg=colors['text_secondary'],
+                             font=('Segoe UI', 10),
+                             padx=15, pady=5)
+    shortcut_hint.pack(side=tk.RIGHT, anchor='se')
+
     return toolbar
 
 
@@ -1461,15 +1470,6 @@ def display_image(img):
     root.bind('<Down>', arrow_down)
     root.bind('<Left>', arrow_left)
     root.bind('<Right>', arrow_right)
-
-    # 在右下角添加快捷键提示
-    shortcut_hint = tk.Label(main_container,
-                             text="快捷键：Ctrl + 滚轮 缩放   方向键 移动图片",
-                             bg=colors['bg_secondary'],
-                             fg=colors['text_secondary'],
-                             font=('Segoe UI', 11),
-                             padx=15, pady=8)
-    shortcut_hint.place(relx=1.0, rely=1.0, anchor='se', x=-10, y=-10)
 
     # 强制设置右侧容器宽度确保生效
     root.update_idletasks()

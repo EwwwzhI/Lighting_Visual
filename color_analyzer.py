@@ -757,12 +757,12 @@ def create_info_panel_modern(parent, points_data, colors):
     treeview.heading("cie1976", text="CIE u'v'")
     treeview.heading("lab", text="CIELAB")
 
-    # 设置列宽 - 重新分配宽度保持总宽度不超
+    # 设置列宽 - 重新分配宽度保持总宽度不超，RGB和LAB需要更多空间显示括号
     treeview.column("point", width=30, anchor="center")
-    treeview.column("position", width=100, anchor="center")
-    treeview.column("rgb", width=100, anchor="center")
+    treeview.column("position", width=95, anchor="center")
+    treeview.column("rgb", width=115, anchor="center")
     treeview.column("cie1931", width=90, anchor="center")
-    treeview.column("cie1976", width=90, anchor="center")
+    treeview.column("cie1976", width=80, anchor="center")
     treeview.column("lab", width=155, anchor="center")
 
     # 确保表格有固定高度和显示
@@ -942,12 +942,12 @@ def update_recent_points_info(points_data, treeview):
         treeview.delete(item)
 
     if not points_data:
-        # 重新分配宽度保持总宽度不超
+        # 重新分配宽度保持总宽度不超，RGB和LAB需要更多空间显示括号
         treeview.column("point", width=30, anchor="center")
-        treeview.column("position", width=100, anchor="center")
-        treeview.column("rgb", width=100, anchor="center")
+        treeview.column("position", width=95, anchor="center")
+        treeview.column("rgb", width=115, anchor="center")
         treeview.column("cie1931", width=90, anchor="center")
-        treeview.column("cie1976", width=90, anchor="center")
+        treeview.column("cie1976", width=80, anchor="center")
         treeview.column("lab", width=155, anchor="center")
         # 添加一个空行确保表格结构可见
         treeview.insert("", "end", values=("", "", "", "", "", ""))
